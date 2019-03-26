@@ -19,16 +19,18 @@ class MusicLibraryController
     puts "To list all of the songs of a particular genre, enter 'list genre'."
     puts "To play a song, enter 'play song'."
     puts "To quit, type 'exit'."
-    puts "What would you like to do?"
     action = ""
     while action != "exit"
+      puts "What would you like to do?"
       action = gets.strip 
-      list_songs if action == "list songs"
+      puts "Hi!" if action == "hi"
+      self.list_songs if action == "list songs"
       list_artists if action == "list artists"
       list_genres if action == "list genres"
       list_songs_by_artist if action == "list artist"
       list_songs_by_genre if action == "list genre"
       play_song if action == "play song"
+      
     end 
   end 
   
